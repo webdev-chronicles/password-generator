@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./javascript/myscript.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section id="initial-section">
+            <h1>Password Generator</h1>
+            <p>Create a strong password that you can use across all your accounts and platforms in a few clicks.</p>
+            <div class="select-password">
+                <label for="my-options">Select an option</label>
+                <select name="my-options" id="my-options">
+                    <option value="random-pass">Generate a random password</option>
+                    <option value="custom-pass">Create a custom password</option>
+                </select>
+            </div>
+        </section>
+        
+    
+        <section id="random-password-section">
+            <h2>Create a random password</h2>
+            <p>Click the button below to generate a random password between 8 and 20 characters long, that contains lowercase, uppercase, numbers, and special characters.</p>
+            <button id="rp-button">Generate password</button>
+            <div id="rp-display">
+                <h3>Your new password is: <span id="my-new-random-password"></span></h3>
+            </div>
+        </section>
+    
+        <section id="custom-password-section">
+            <h2>select the length of your password</h2>
+            <form action="" id="password-length">
+                <div class="password-l">
+                    <input type="radio" id="10c" name="p-length" value="10">
+                    <label for="10c">10 characters</label>
+                </div>
+                <div class="password-l">
+                    <input type="radio" id="20c" name="p-length" value="20">
+                    <label for="20c">20 characters</label>
+                </div>
+                <div class="password-l">
+                    <input type="radio" id="30c" name="p-length" value="30">
+                    <label for="30c">30 characters</label>
+                </div>
+                <div class="password-l">
+                    <input type="radio" id="40c" name="p-length" value="40">
+                    <label for="40c">40 characters</label>
+                </div>
+                <div class="password-l">
+                    <input type="radio" id="custom-len" name="p-length">
+                    <label for="50c">custom lenght</label>
+                </div>
+                <div class="password-1" id="hidden-input-block">
+                    <label for="custom-num">Input a number between 6 and 50</label>
+                    <input type="number" min="6" max="50" id="custom-num" value="8">
+                </div>
+            </form>
+    
+            <h2>Select the composition of your password</h2>
+            <form action="" id="password-composition">
+                <div class="password-c">
+                    <input type="checkbox" id="l-char" name="comp-1" value="lowercase">
+                    <label for="l-char">Lowercase characters</label>
+                </div>
+                <div class="password-c">
+                    <input type="checkbox" id="u-char" name="comp-2" value="uppercase">
+                    <label for="u-char">Uppercase characters</label>
+                </div>
+                <div class="password-c">
+                    <input type="checkbox" id="n-char" name="comp-3" value="number">
+                    <label for="n-char">Numbers</label>
+                </div>
+                <div class="password-c">
+                    <input type="checkbox" id="s-char" name="comp-4" value="special">
+                    <label for="s-char">Special Characters</label>
+                </div>
+            </form>
+            <button id="cp-button">Create password</button>
+            <div id="cp-display">
+                <h3>Your new password is: <span id="my-new-custom-password"></span></h3>
+            </div>
+        </section>
+        <p class="copyright">©2022 YLWEBDEV | all rights reserved</p>
+    </main>
+</body>
+</html>
